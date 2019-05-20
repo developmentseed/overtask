@@ -1,18 +1,21 @@
 const { TM } = require('../../lib')
+const pump = require('pump')
 
-async function command (args, flags, context) {
+function command (args, flags, context) {
   const { endpoint } = flags
   if (!endpoint) {
-    console.error("endpoint is required")
+    console.error("Argument `endpoint` is required")
     return process.exit(1)
   }
 
   let tm = new TM('tm2', endpoint, flags)
-  let projects = await tm.getProjects()
-  projects.forEach(project => {
-    process.stdout(project)
+  pump(tm.getProjects(), process.stdout, (err) => {
+    if (err) {
+      console.error("Error getting projects", err)
+      return process.exit(1)
+    }
+    return process.exit()
   })
-  return process.exit()
 }
 
 const args = []
@@ -27,7 +30,8 @@ const flags = [
     name: 'proxy',
     alias: 'p',
     type: 'string'
-  }
+  },
+
 ]
 
 const options = {

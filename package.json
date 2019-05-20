@@ -8,7 +8,9 @@
   "dependencies": {
     "directory-command": "^4.2.0",
     "dotenv": "^8.0.0",
+    "from2": "^2.3.0",
     "p-limit": "^2.2.0",
+    "request": "^2.88.0",
     "request-promise-native": "^1.0.7"
   }
 }

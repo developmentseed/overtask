@@ -1,0 +1,14 @@
+{
+  "name": "overtask",
+  "version": "0.1.0",
+  "description": "CLI/SDK to grab tasks from OSM tasking managers",
+  "main": "index.js",
+  "author": "Marc Farra <marcfarra@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "directory-command": "^4.2.0",
+    "dotenv": "^8.0.0",
+    "p-limit": "^2.2.0",
+    "request-promise-native": "^1.0.7"
+  }
+}

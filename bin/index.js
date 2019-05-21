@@ -7,6 +7,7 @@ const directory = path.join(__dirname, 'commands')
 
 const options = {
   commandName: 'overtask',
+  leftColumnWidth: 50,
   context: {}
 }
 

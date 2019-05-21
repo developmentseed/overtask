@@ -1,6 +1,6 @@
 {
   "name": "@developmentseed/overtask",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "CLI/SDK to grab tasks from OSM tasking managers",
   "main": "bin/index.js",
   "bin": {

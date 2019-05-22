@@ -10,12 +10,20 @@ Supported tasking managers:
 
 ### Installing
 ```
-npm install -g @developmentseed/overtask
+> npm install -g @developmentseed/overtask
 ```
 
 ### Get all tasks from the HOTOSM Tasking manager
 ```
-overtask tm3 http://tasks.hotosm.org
+> overtask tm3 http://tasks.hotosm.org
+```
+
+### Examples
+You can pair the output of `overtask` with [jq](https://stedolan.github.io/jq/), for example
+```
+> overtask tm3 http://tasks.openstreetmap.us | jq .name | grep TIGER
+"Southwest Minnesota TIGER Alignment"
+"Oklahoma County TIGER cleanup"
 ```
 
 ## License

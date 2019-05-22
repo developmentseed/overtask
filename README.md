@@ -1,4 +1,8 @@
-# overtask 📐
+# 📐 overtask 
+[![npm][npm-image]][npm-url]
+
+[npm-image]: https://img.shields.io/npm/v/@developmentseed/overtask.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@developmentseed/overtask
 
 A javascript library and command line tool to grab tasks from OpenStreetMap tasking managers.
 

@@ -9,19 +9,23 @@ Supported tasking managers:
 ## CLI
 
 ### Installing
-```
-> npm install -g @developmentseed/overtask
+```bash
+npm install -g @developmentseed/overtask
 ```
 
 ### Get all tasks from the HOTOSM Tasking manager
-```
-> overtask tm3 http://tasks.hotosm.org
+```bash
+overtask tm3 http://tasks.hotosm.org
 ```
 
 ### Examples
 You can pair the output of `overtask` with [jq](https://stedolan.github.io/jq/), for example
+```bash
+overtask tm3 http://tasks.openstreetmap.us | jq .name | grep TIGER
 ```
-> overtask tm3 http://tasks.openstreetmap.us | jq .name | grep TIGER
+will output:
+
+```bash
 "Southwest Minnesota TIGER Alignment"
 "Oklahoma County TIGER cleanup"
 ```
